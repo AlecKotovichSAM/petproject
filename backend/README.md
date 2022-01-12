@@ -1,5 +1,11 @@
 # Getting Started
 
+### Install Helm chart
+
+```console
+helm install alecpetbackend helmchart
+```
+
 ### Reference Documentation
 For further reference, please consider the following sections:
 
