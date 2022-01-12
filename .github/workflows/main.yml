@@ -52,7 +52,7 @@ jobs:
         run: |
           VERSION=0.1
           DOCKER_IMAGE_PREFIX_LOWER=$(echo $DOCKER_IMAGE_PREFIX | awk '{print tolower($0)}')
-          mvn dockerfile:build dockerfile:push -Darm64=true -Ddocker.image.tag=$VERSION -Ddocker.image.prefix=$DOCKER_IMAGE_PREFIX_LOWER
+          mvn dockerfile:build dockerfile:push -Darm64=true -Ddocker.image.tag=$VERSION-ARM64 -Ddocker.image.prefix=$DOCKER_IMAGE_PREFIX_LOWER
         env:
           DOCKER_IMAGE_PREFIX: ${{ env.REGISTRY_NAME }}/${{ github.repository }}
           GITHUB_ACTOR: ${{ secrets.CR_USERNAME }}
