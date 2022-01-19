@@ -56,3 +56,10 @@ spec:
               {{- end }}
           {{- end }}
     {{- end }}
+      - backend:
+        path: /.well-known
+        pathType: Prefix
+          service:
+            name: webfs-ip-service
+            port:
+              number: 80
