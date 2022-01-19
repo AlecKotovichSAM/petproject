@@ -7,6 +7,14 @@ export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 helm install alecpetbackend helmchart
 ```
 
+### Upgrade
+
+```console
+export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+helm upgrade alecpetbackend helmchart
+```
+
+
 ### Reference Documentation
 For further reference, please consider the following sections:
 
