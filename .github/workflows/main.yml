@@ -38,7 +38,7 @@ jobs:
       - name: Docker build
         working-directory: backend
         run: |
-          VERSION=0.1
+          VERSION=0.1.1
           DOCKER_IMAGE_PREFIX_LOWER=$(echo $DOCKER_IMAGE_PREFIX | awk '{print tolower($0)}')
           mvn dockerfile:build dockerfile:push -Ddocker.image.tag=$VERSION -Ddocker.image.prefix=$DOCKER_IMAGE_PREFIX_LOWER
         env:
