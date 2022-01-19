@@ -50,7 +50,7 @@ jobs:
       - name: Docker build (ARM64)
         working-directory: backend
         run: |
-          VERSION=0.1
+          VERSION=0.1.1
           DOCKER_IMAGE_PREFIX_LOWER=$(echo $DOCKER_IMAGE_PREFIX | awk '{print tolower($0)}')
           mvn dockerfile:build dockerfile:push -Darm64=true -Ddocker.image.tag=$VERSION-ARM64 -Ddocker.image.prefix=$DOCKER_IMAGE_PREFIX_LOWER
         env:
